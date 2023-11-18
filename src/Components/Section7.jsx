@@ -53,7 +53,7 @@ const Section7 = () => {
                         </Slider>
                     </Box>
                 </Box>
-                <Flex gap={'20px'} w={{base : '100%', sm : '100%', md : '100%', lg : '65%', xl : '65%', '2xl' : '65%'}} flexDir={{base : 'column-reverse', sm : 'column-reverse', md : 'column-reverse', lg : 'row', xl : 'row', '2xl' : 'row'}} shadow={'md'} p={'30px'} justifyContent={'space-between'} borderRadius={'10px'}>
+                <Flex gap={window.screen.availWidth > 430 ? '20px' : '50px'} w={{base : '100%', sm : '100%', md : '100%', lg : '65%', xl : '65%', '2xl' : '65%'}} flexDir={{base : 'column-reverse', sm : 'column-reverse', md : 'column-reverse', lg : 'row', xl : 'row', '2xl' : 'row'}} shadow={'md'} p={'30px'} justifyContent={'space-between'} borderRadius={'10px'}>
                     <Box w={{base : '100%', sm : '100%', md : '100%', lg : '48%', xl : '48%', '2xl' : '48%'}} fontWeight={'500'}>
                         <Image src={ellipse} />
                         <Flex mt={'40px'} justifyContent={'space-between'}>
@@ -75,12 +75,12 @@ const Section7 = () => {
                             <Text color={'#8800EC'} fontWeight={'500'}>₹3,59,454</Text>
                         </Flex>
                     </Box>
-                    <Box w={{base : '100%', sm : '100%', md : '100%', lg : '40%', xl : '40%', '2xl' : '40%'}} position={'relative'}>
+                    <Box position={'relative'} w={{base : '100%', sm : '100%', md : '100%', lg : '40%', xl : '40%', '2xl' : '40%'}}>
                         <Box bg={'#FCF8FF'} p={'40px 20px'} textAlign={'center'}>
                             <Text fontWeight={'bold'} mb={'25px'} fontSize={'20px'}>Equated Monthly Installments (EMI)</Text>
                             <Heading>₹14,977</Heading>
                         </Box>
-                        <Button variant={'none'} className='btn'>APPLY NOW</Button>
+                        <Button bottom={'0'} position={window.screen.availWidth > 820 ? 'absolute' : 'static'} mt={window.screen.availWidth > 430 ? '0' : '30px'} variant={'none'} className='btn'>APPLY NOW</Button>
                     </Box>
                 </Flex>
             </Flex>
@@ -105,8 +105,6 @@ const SECTION = styled.section`
         height: 40px;
         padding: 8px 55px;
         text-align: start;
-        position: absolute;
-        bottom: 0;
 
         &:hover{
             opacity: 0.9;

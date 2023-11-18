@@ -8,12 +8,12 @@ import invertedComma from '../Assets/Section5/invertedComma.svg';
 const Section5 = () => {
     return (
         <SECTION>
-            <Box className='main-container'>
-                <Flex className='container-heading'>
+            <Box className='main-container' w={{ base: '100%', sm: '100%', md: '100%', lg: '100%', xl: '90%', '2xl': '85%' }}>
+                <Flex className='container-heading' w={'100%'}>
                     <Image src={hands} />
-                    <Heading as={'h1'}>What Our Customer Says</Heading>
+                    <Heading fontSize={{base : '18px', sm : '18px'}} as={'h1'}>What Our Customer Says</Heading>
                 </Flex>
-                <Flex className='main-flex' flexDir={{base : 'column', sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row'}}>
+                <Flex className='main-flex' flexDir={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}>
                     <Image src={accountant} />
                     <Image src={invertedComma} />
                     <Box className='inner-box'>
@@ -33,10 +33,11 @@ const Section5 = () => {
 export default Section5;
 
 const SECTION = styled.section`
+background-color: #F8F9FA;
 
    .main-container{
-      background-color: #F8F9FA;
-      padding: 50px 60px 0 60px;
+      padding: 40px 50px 0 50px;
+      margin: 0 auto;
 
       .container-heading{
         gap: 10px;

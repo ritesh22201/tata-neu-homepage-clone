@@ -18,9 +18,6 @@ const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef()
 
-    // useEffect(() => {
-    //     console.log(onOpen)
-    // }, [])
     return (
         <DIV>
             <Flex boxShadow={'base'} p={'24px'} alignItems={'center'} justifyContent={'space-between'}>
@@ -86,13 +83,13 @@ const DIV = styled.div`
             position: relative;
             img{
                 position: absolute;
-                left: 2.5%;
+                left: 5%;
                 top: 33%;
             }
         }
         input{
             border-radius: 3px;
-            padding-left: 30px;
+            padding-left: 38px;
             background: var(--light-states-on-background-high-contrast-opacity-012, rgba(33, 33, 33, 0.12));
         }
      }

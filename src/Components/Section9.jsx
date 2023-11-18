@@ -6,7 +6,7 @@ import friends from '../Assets/Footer/friends.svg';
 const Section9 = () => {
     return (
         <SECTION>
-            <Flex gap={'10px'} justifyContent={'space-between'} flexDir={{base : 'column-reverse', sm : 'column-reverse', md : 'column-reverse', lg : 'row', xl : 'row', '2xl' : 'row'}} alignItems={'center'}>
+            <Flex textAlign={window.screen.availWidth < 820 ? 'center' : 'start'} gap={'10px'} justifyContent={'space-between'} flexDir={{base : 'column-reverse', sm : 'column-reverse', md : 'column-reverse', lg : 'row', xl : 'row', '2xl' : 'row'}} alignItems={'center'}>
                 <Box w={{base : '100%', sm : '100%', md : '100%', lg : '40%', xl : '40%', '2xl' : '40%'}}>
                     <Text mb={'20px'} fontSize={'35px'} fontWeight={'500'}>Refer & Earn Now</Text>
                     <Text mb={'10px'}>Get a ₹500 Big Basket gift card</Text>

@@ -52,18 +52,18 @@ const Section6 = () => {
 
     return (
         <SECTION>
-            <Tabs variant='enclosed' className='tabs-container'>
+            <Tabs m={'20px auto'} variant='enclosed' className='tabs-container' w={{base : '100%', sm : '100%', md : '85%', lg : '85%', xl : '85%', '2xl' : '85%'}}>
                 <TabList className='tablist'>
                     {colors.map((el, i) => {
                         return <Tab fontWeight={tabColors[i] ? 'bold' : 'normal'} color={tabColors[i] ? '#8800EC' : i === 0 ? '#8800EC' : 'gray.600'} key={i} onClick={() => handleTabColors(i)}>
-                            <Image w={'26%'} src={el.url} />
-                            <Text>{el.text}</Text>
+                            {window.screen.availWidth > 430 && <Image w={'26%'} src={el.url} />}
+                            <Text fontSize={window.screen.availWidth < 430 && '14px'}>{el.text}</Text>
                         </Tab>
                     })}
                 </TabList>
                 <TabPanels className='table-panels'>
                     <TabPanel className='tabpanel'>
-                        <Box w={'50%'} textAlign={'start'}>
+                        <Box w={window.screen.availWidth > 430 ? '50%' : '100%'} textAlign={'start'}>
                             {tabChild1.map(el => {
                                 return <Box key={el} mb={'40px'}>
                                     <Flex alignItems={'center'} gap={'7px'}>
@@ -74,12 +74,12 @@ const Section6 = () => {
                                 </Box>
                             })}
                         </Box>
-                        <Box w={'30%'}>
+                        {window.screen.availWidth > 430 && <Box w={'30%'}>
                             <Image src={bus} />
-                        </Box>
+                        </Box>}
                     </TabPanel>
                     <TabPanel className='tabpanel'>
-                        <Box w={'50%'} textAlign={'start'}>
+                        <Box w={window.screen.availWidth > 430 ? '50%' : '100%'} textAlign={'start'}>
                             {tabChild2.map(el => {
                                 return <Box key={el} mb={'40px'}>
                                     <Flex alignItems={'center'} gap={'7px'}>
@@ -90,12 +90,12 @@ const Section6 = () => {
                                 </Box>
                             })}
                         </Box>
-                        <Box w={'30%'}>
+                        {window.screen.availWidth > 430 && <Box w={'30%'}>
                             <Image src={bus} />
-                        </Box>
+                        </Box>}
                     </TabPanel>
                     <TabPanel className='tabpanel'>
-                        <Box w={'50%'} textAlign={'start'}>
+                        <Box w={window.screen.availWidth > 430 ? '50%' : '100%'} textAlign={'start'}>
                             {tabChild3.map(el => {
                                 return <Box key={el} mb={'40px'}>
                                     <Flex alignItems={'center'} gap={'7px'}>
@@ -106,12 +106,12 @@ const Section6 = () => {
                                 </Box>
                             })}
                         </Box>
-                        <Box w={'30%'}>
+                        {window.screen.availWidth > 430 && <Box w={'30%'}>
                             <Image src={bus} />
-                        </Box>
+                        </Box>}
                     </TabPanel>
                     <TabPanel className='tabpanel'>
-                        <Box w={'50%'} textAlign={'start'}>
+                        <Box w={window.screen.availWidth > 430 ? '50%' : '100%'} textAlign={'start'}>
                             {tabChild4.map(el => {
                                 return <Box key={el} mb={'40px'}>
                                     <Flex alignItems={'center'} gap={'7px'}>
@@ -122,9 +122,9 @@ const Section6 = () => {
                                 </Box>
                             })}
                         </Box>
-                        <Box w={'30%'}>
+                        {window.screen.availWidth > 430 && <Box w={'30%'}>
                             <Image src={bus} />
-                        </Box>
+                        </Box>}
                     </TabPanel>
                 </TabPanels>
             </Tabs>
@@ -135,7 +135,6 @@ const Section6 = () => {
 export default Section6;
 
 const SECTION = styled.section`
-  width: 85%;
   margin: 40px auto;
 
   .tabs-container{

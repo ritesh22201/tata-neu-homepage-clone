@@ -17,8 +17,8 @@ import lightning from '../Assets/Section4/lightning.svg';
 const Section4 = () => {
     return (
         <SECTION>
-            <Flex minH={'80vh'} className='main-container' flexDir={{base : 'column', sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row'}}>
-                <Box className='box1' backgroundImage={`url(${backgroundImg})`} w={{base : '100%', sm : '100%', md : '100%', lg : '50%', xl : '50%', '2xl' : '50%'}}>
+            <Flex gap={{base : '50px', sm : '50px', md : '50px', lg : '10px', xl : '10px', '2xl' : '10px'}} className='main-container' flexDir={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}>
+                <Box className='box1' backgroundSize={'contain'} backgroundImage={`url(${backgroundImg})`} w={{ base: '100%', sm: '100%', md: '100%', lg: '50%', xl: '50%', '2xl': '50%' }}>
                     <Box position={'relative'}>
                         <Image src={iphone} />
                         <Image className='img2' src={logo} />
@@ -32,37 +32,39 @@ const Section4 = () => {
                             <Text color={'gray.600'}>Personal Loan</Text>
                             <Text color={'#8800ec'} fontWeight={'bold'}>upto Rs 10 Lacs</Text>
                         </VStack>
+                       {window.screen.availWidth > 430 && <>
+                            <Flex className='small-boxes' top={'15%'} left={'-48%'} bg={'#FFE0B3'}>
+                                <Image src={hospital} />
+                                <Text>Medical</Text>
+                            </Flex>
+                            <Flex className='small-boxes' top={'9%'} right={'-68%'} bg={'#B3E0FF'}>
+                                <Image src={hammer} />
+                                <Text>Rennovations</Text>
+                            </Flex>
+                            <Flex className='small-boxes' top={'46%'} right={'-68%'} bg={'#FFB3E0'}>
+                                <Image src={building} />
+                                <Text>School Loans</Text>
+                            </Flex>
+                            <Flex className='small-boxes' bottom={'12%'} right={'-45%'} bg={'#D0FFB3'}>
+                                <Image src={travel} />
+                                <Text>Travel</Text>
+                            </Flex>
+                            <Flex className='small-boxes' bottom={'38%'} left={'-54%'} bg={'#DFB3FF'}>
+                                <Image src={shopping} />
+                                <Text>Shopping</Text>
+                            </Flex>
+                        </>}
                     </Box>
-                    <Flex className='small-boxes' top={'15%'} left={'12%'} bg={'#FFE0B3'}>
-                        <Image src={hospital} />
-                        <Text>Medical</Text>
-                    </Flex>
-                    <Flex className='small-boxes' top={'9%'} right={'2%'} bg={'#B3E0FF'}>
-                        <Image src={hammer} />
-                        <Text>Rennovations</Text>
-                    </Flex>
-                    <Flex className='small-boxes' top={'46%'} right={'2%'} bg={'#FFB3E0'}>
-                        <Image src={building} />
-                        <Text>School Loans</Text>
-                    </Flex>
-                    <Flex className='small-boxes' bottom={'12%'} right={'11.5%'} bg={'#D0FFB3'}>
-                        <Image src={travel} />
-                        <Text>Travel</Text>
-                    </Flex>
-                    <Flex className='small-boxes' bottom={'38%'} left={'6%'} bg={'#DFB3FF'}>
-                        <Image src={shopping} />
-                        <Text>Shopping</Text>
-                    </Flex>
                 </Box>
-                <Box className='box2' w={{base : '100%', sm : '100%', md : '100%', lg : '50%', xl : '50%', '2xl' : '50%'}}>
-                    <Flex marginLeft={'4%'}>
+                <Box h={'fit-content'} display={'grid'} placeItems={'center'} className='box2' w={{ base: '100%', sm: '100%', md: '100%', lg: '50%', xl: '50%', '2xl': '50%' }}>
+                    <Flex>
                         <Image src={lightning} />
-                        <Text fontSize={'30px'} fontWeight={'500'}>Lightning Fast Process</Text>
+                        <Text fontSize={{base : '19px', sm : '19px', md : '27px', lg : '30px', xl : '30px', '2xl' : '30px'}} fontWeight={'500'}>Lightning Fast Process</Text>
                     </Flex>
                     <Box marginTop={'11%'}>
                         <Image className='range-img' src={range} />
                     </Box>
-                    <Button variant={'none'} className='btn'>APPLY NOW</Button>
+                    <Button mt={'10px'} variant={'none'} className='btn'>APPLY NOW</Button>
                 </Box>
             </Flex>
         </SECTION>
@@ -73,10 +75,9 @@ export default Section4;
 
 const SECTION = styled.section`
    width: 85%;
-   margin: 20px auto;
+   margin: 65px auto;
    
    .main-container{
-     gap: 8%;
      align-items: center;
    }
 
@@ -144,11 +145,8 @@ const SECTION = styled.section`
    }
 
    .box2{
-    position: relative;
-    min-height: 45vh;
-
       .range-img{
-          width: 84%;
+          margin-top: -25px;
        }
       .btn{
         background: var(--1, #8800EC);
@@ -156,26 +154,12 @@ const SECTION = styled.section`
         border-radius: 2px;
         font-weight: 500;
         height: 40px;
-        padding: 8px 55px;
-        text-align: start;
-        position: absolute;
-        bottom: 0%;
-        left: 23%;
+        padding: 8px 85px;
 
         &:hover{
             opacity: 0.9;
         }
       }
-   }
-
-   .box2 > div{
-      gap: 5px;
-      align-items: center;
-   }  
-   
-   .box2 img{
-     width: 9%;
-     margin-top: 6px;
    }
 
 `
