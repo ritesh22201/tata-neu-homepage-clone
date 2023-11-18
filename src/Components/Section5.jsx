@@ -13,7 +13,7 @@ const Section5 = () => {
                     <Image src={hands} />
                     <Heading as={'h1'}>What Our Customer Says</Heading>
                 </Flex>
-                <Flex className='main-flex'>
+                <Flex className='main-flex' flexDir={{base : 'column', sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row'}}>
                     <Image src={accountant} />
                     <Image src={invertedComma} />
                     <Box className='inner-box'>
@@ -23,9 +23,6 @@ const Section5 = () => {
                             Ab, magnam esse totam porro sunt saepe quidem velit facilis blanditiis fugit sed non a? Magnam quae eos ducimus repellat mollitia nostrum, illo modi ipsam, earum quod laudantium reprehenderit aliquam.
                             Odio incidunt culpa tempora odit fuga quibusdam quia reiciendis veniam nisi quae recusandae atque officia id vel amet quod deserunt, dolores debitis eveniet? Minus dignissimos recusandae explicabo ipsum reprehenderit similique?
                         </Text>
-                        <Flex>
-                            
-                        </Flex>
                     </Box>
                 </Flex>
             </Box>

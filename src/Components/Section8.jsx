@@ -43,7 +43,7 @@ const Section8 = () => {
         </Box>
         <Box m={'60px 0 20px 0'} p={'22px 30px'} bg={'#f4ecf9'} textAlign={'start'}>
             <Text fontWeight={'bold'}>Anything not clear?</Text>
-            <Flex alignItems={'center'}>
+            <Flex gap={'20px'} alignItems={'center'} flexDir={{base : 'column', sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row'}}>
                 <Text mt={'15px'} color={'gray.600'} w={'80%'}>You can see our detailed F&Q sessions if you have more quiries. Also we are always a single call away for all your special asks...</Text>
                 <Button mt={'10px'} variant={'none'} className='btn'>CONTACT US</Button>
             </Flex>

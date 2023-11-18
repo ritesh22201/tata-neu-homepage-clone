@@ -11,8 +11,8 @@ const Section7 = () => {
                 <Image w={'42px'} src={handStar} />
                 <Text fontWeight={'500'} fontSize={'30px'}>EMI Calculator</Text>
             </Flex>
-            <Flex justifyContent={'space-between'}>
-                <Box w={'30%'} p={'15px 15px 0 15px'} borderRadius={'10px'} boxShadow={'md'} color={'gray.500'}>
+            <Flex justifyContent={'space-between'} flexDir={{base : 'column', sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row'}}>
+                <Box w={{base : '100%', sm : '100%', md : '100%', lg : '30%', xl : '30%', '2xl' : '30%'}} p={'15px 15px 0 15px'} borderRadius={'10px'} boxShadow={'md'} color={'gray.500'}>
                     <Box mb={'20px'}>
                         <Text mb={'5px'}>Loan Amount</Text>
                         <InputGroup>
@@ -53,8 +53,8 @@ const Section7 = () => {
                         </Slider>
                     </Box>
                 </Box>
-                <Flex w={'65%'} shadow={'md'} p={'30px'} justifyContent={'space-between'} borderRadius={'10px'}>
-                    <Box w={'48%'} fontWeight={'500'}>
+                <Flex gap={'20px'} w={{base : '100%', sm : '100%', md : '100%', lg : '65%', xl : '65%', '2xl' : '65%'}} flexDir={{base : 'column-reverse', sm : 'column-reverse', md : 'column-reverse', lg : 'row', xl : 'row', '2xl' : 'row'}} shadow={'md'} p={'30px'} justifyContent={'space-between'} borderRadius={'10px'}>
+                    <Box w={{base : '100%', sm : '100%', md : '100%', lg : '48%', xl : '48%', '2xl' : '48%'}} fontWeight={'500'}>
                         <Image src={ellipse} />
                         <Flex mt={'40px'} justifyContent={'space-between'}>
                             <Flex gap={'10px'} alignItems={'center'}>
@@ -75,7 +75,7 @@ const Section7 = () => {
                             <Text color={'#8800EC'} fontWeight={'500'}>₹3,59,454</Text>
                         </Flex>
                     </Box>
-                    <Box w={'40%'} position={'relative'}>
+                    <Box w={{base : '100%', sm : '100%', md : '100%', lg : '40%', xl : '40%', '2xl' : '40%'}} position={'relative'}>
                         <Box bg={'#FCF8FF'} p={'40px 20px'} textAlign={'center'}>
                             <Text fontWeight={'bold'} mb={'25px'} fontSize={'20px'}>Equated Monthly Installments (EMI)</Text>
                             <Heading>₹14,977</Heading>

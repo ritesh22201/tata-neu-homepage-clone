@@ -38,7 +38,7 @@ const Section1 = () => {
                                 <Text>Interest Rates</Text>
                             </Box>
                         </Flex>
-                        <Flex className='child'>
+                        <Flex className='child' ml={'8px'}>
                             <Image src={frame4} />
                             <Box>
                                 <Text fontWeight={'bold'}>Miniamal</Text>

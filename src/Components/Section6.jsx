@@ -146,7 +146,7 @@ const SECTION = styled.section`
 
     .tablist > *{
         display: flex;
-        width: 220px;
+        width: 25%;
         align-items: center;
         gap: 10px;
     }
