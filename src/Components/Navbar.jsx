@@ -51,7 +51,8 @@ const Navbar = () => {
                     <Flex>
                         <Image src={cart} />
                     </Flex>
-                    <Flex>
+                    <Flex position={'relative'}>
+                        <Box position={'absolute'} w={'10px'} h={'10px'} right={'0'} top={'6%'} borderRadius={'50%'} bg={'#006A6A'}></Box>
                         <Image src={bell} />
                     </Flex>
                     <Flex>
@@ -68,6 +69,10 @@ export default Navbar;
 const DIV = styled.div`
      a{
         font-weight: 500;
+     }
+
+     a:hover{
+        text-decoration: underline;
      }
 
      .container1{
