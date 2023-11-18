@@ -18,9 +18,9 @@ const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef()
 
-    useEffect(() => {
-        console.log(onOpen)
-    }, [])
+    // useEffect(() => {
+    //     console.log(onOpen)
+    // }, [])
     return (
         <DIV>
             <Flex boxShadow={'base'} p={'24px'} alignItems={'center'} justifyContent={'space-between'}>
