@@ -11,7 +11,7 @@ const Section2 = () => {
     <SECTION>
         <Box p={{base : '10px', sm : '10px', md : '10px', lg : '6% 7% 0 4%', xl : '6% 7% 0 4%', '2xl' : '6% 7% 0 4%'}}>
             <Flex alignItems={'center'} ml={'20px'}>
-                <Image w={'4%'} src={star} />
+                <Image w={'35px'} src={star} />
                 <Heading fontSize={'25px'}>Personal Loan Highlights</Heading>
             </Flex>
             <Flex gap={'10px'} mt={'40px'} w={'100%'} flexDir={{base : 'column', sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row'}} justifyContent={'space-between'}>

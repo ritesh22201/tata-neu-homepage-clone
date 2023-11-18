@@ -46,7 +46,7 @@ const Section1 = () => {
                             </Box>
                         </Flex>
                     </Flex>
-                    <Button variant={'none'} className='btn'>APPLY NOW</Button>
+                    <Button p={window.screen.availWidth < 430 ? '12px 40px' : '8px 16px'} variant={'none'} className='btn'>APPLY NOW</Button>
                 </Box>
                 <Box className='box2' w={{base : '100%', sm : '100%', md : '100%', lg : '40%', xl : '40%', '2xl' : '40%'}}>
                     <Image w={'100%'} src={family} />
@@ -99,8 +99,7 @@ const SECTION = styled.section`
         background: var(--1, #8800EC);
         color: white;
         border-radius: 3px;
-        height: 45px;
-        padding: 8px 16px;
+        height: 40px;
         text-align: start;
     }
 
